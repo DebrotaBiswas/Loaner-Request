@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="44dfc7e9add303107f44ef4eb045822c" extends="task" label="Loaner Request" max_length="40" name="x_cdltd_loaner_r_0_loaner_request" type="collection">
-        <element label="Other" max_length="40" name="other" type="string"/>
+        <element label="Other" max_length="40" name="other" type="glide_date_time"/>
         <element label="Requested For" mandatory="true" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
         <element label="Start date" mandatory="true" max_length="255" name="start_date" type="glide_date_time"/>
         <element choice="3" default="sc" label="Depot" max_length="255" name="depot" type="choice">
@@ -15,6 +15,7 @@
             </choice>
         </element>
         <element label="End date" mandatory="true" max_length="255" name="end_date" type="glide_date_time"/>
+        <element label="Pick up reminder" max_length="255" name="pick_up_reminder" type="glide_date_time"/>
         <element label="Location to be used" max_length="40" name="location_to_be_used" type="string"/>
         <element choice="3" default="cmdb_ci_computer" label="Item type" max_length="255" name="item_type" type="choice">
             <choice>
